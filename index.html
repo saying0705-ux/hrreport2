@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디지털마케팅팀 인력 운영 계획안 (개정) — HR 정리본</title>
+<style>
+  :root{
+    --navy:#1f3a5f; --navy2:#2c4f7c; --steel:#3d6294; --accent:#c89b3c;
+    --keep:#1f7a4d; --keepbg:#e8f5ee; --rec:#b1442e; --recbg:#fbeae6;
+    --cond:#9a6b1a; --condbg:#fdf3df; --move:#6a3fa0; --movebg:#f1ebfa;
+    --gray:#5b6470; --line:#e3e7ec; --soft:#f6f8fa; --ink:#1c2733;
+    --peak:#b1442e; --high:#d98a3d; --mid:#3d6294; --calm:#7fa05f;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","NanumGothic",sans-serif;
+    color:var(--ink); line-height:1.6; margin:0; background:#eef1f4; font-size:13.5px; -webkit-font-smoothing:antialiased;}
+  .page{max-width:1080px; margin:0 auto; background:#fff; box-shadow:0 2px 24px rgba(0,0,0,.08);}
+  .cover{background:linear-gradient(135deg,var(--navy) 0%,var(--steel) 100%); color:#fff; padding:36px 48px 28px;}
+  .cover .eyebrow{font-size:12px; letter-spacing:3px; opacity:.85; margin:0 0 10px; font-weight:600;}
+  .cover h1{font-size:24px; line-height:1.32; margin:0 0 8px; font-weight:800;}
+  .cover h2{font-size:14px; font-weight:400; opacity:.92; margin:0 0 18px; line-height:1.6;}
+  .cover .meta{border-top:1px solid rgba(255,255,255,.25); padding-top:13px; display:flex; flex-wrap:wrap; gap:24px; font-size:13px;}
+  .cover .meta b{display:block; opacity:.7; font-size:11px; font-weight:600; letter-spacing:1px; margin-bottom:2px;}
+  .badge{display:inline-block; background:var(--accent); color:#1c2733; font-weight:700; font-size:11.5px; padding:4px 11px; border-radius:20px; margin-bottom:13px; letter-spacing:1px;}
+  .body{padding:24px 48px 30px;}
+  section{margin-bottom:24px;}
+  h3.sec{font-size:16.5px; color:var(--navy); border-left:5px solid var(--accent); padding-left:12px; margin:0 0 5px; font-weight:800;}
+  .sec-sub{color:var(--gray); font-size:12px; margin:0 0 13px;}
+  h4{font-size:13.5px; color:var(--navy2); margin:17px 0 9px; font-weight:700;}
+  p{margin:0 0 9px;}
+  /* sentence-per-line lead block */
+  .lead{background:#fffaf0; border-left:5px solid var(--accent); border-radius:0 9px 9px 0; padding:14px 18px; margin:2px 0 14px;}
+  .lead p{margin:0 0 7px; line-height:1.7;} .lead p:last-child{margin:0;} .lead b{color:var(--navy);}
+  .kpis{display:grid; grid-template-columns:repeat(6,1fr); gap:9px; margin:8px 0 2px;}
+  .kpi{background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:12px 6px; text-align:center;}
+  .kpi .n{font-size:19px; font-weight:800; color:var(--navy); line-height:1;}
+  .kpi .l{font-size:10.5px; color:var(--gray); margin-top:6px; line-height:1.35;}
+  .kpi.green .n{color:var(--keep);} .kpi.red .n{color:var(--rec);} .kpi.purple .n{color:var(--move);} .kpi.gold .n{color:var(--cond);}
+  table{width:100%; border-collapse:collapse; font-size:12px; margin:5px 0 3px;}
+  th,td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top; line-height:1.55;}
+  thead th{background:var(--navy); color:#fff; font-weight:700; font-size:11.5px;}
+  tbody tr:nth-child(even){background:#fafbfc;}
+  td .nm{font-weight:700; color:var(--ink);}
+  .tag{display:inline-block; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:5px; white-space:nowrap;}
+  .t-keep{background:var(--keepbg); color:var(--keep);}
+  .t-rec{background:var(--recbg); color:var(--rec);}
+  .t-leave{background:#e7eefb; color:#3a4f9a;}
+  .t-move{background:var(--condbg); color:var(--cond);}
+  .t-2nd{background:var(--movebg); color:var(--move);}
+  /* change list */
+  .chg{display:grid; grid-template-columns:1fr 1fr; gap:9px;}
+  @media(max-width:760px){.chg{grid-template-columns:1fr;}}
+  .chg .ci{background:#fff; border:1px solid var(--line); border-left:4px solid var(--steel); border-radius:8px; padding:10px 13px; font-size:12.4px;}
+  .chg .ci b{color:var(--navy);}
+  /* org chart */
+  .org{margin:10px 0 4px;}
+  .obox{border-radius:9px; padding:9px 12px; text-align:center; font-size:12.5px; line-height:1.4;}
+  .otop{background:var(--navy); color:#fff; font-weight:800; max-width:340px; margin:0 auto;}
+  .ostem{width:2px; height:14px; background:var(--line); margin:0 auto;}
+  .opart{background:var(--navy2); color:#fff; font-weight:700; max-width:420px; margin:0 auto;}
+  .orow{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:12px;}
+  @media(max-width:760px){.orow{grid-template-columns:1fr 1fr;}}
+  .ocell{background:var(--soft); border:1px solid var(--line); border-top:3px solid var(--steel); border-radius:8px; padding:9px 8px; text-align:center;}
+  .ocell .oh{font-weight:800; color:var(--navy); font-size:12px;}
+  .ocell .od{font-size:10.8px; color:var(--gray); margin-top:4px; line-height:1.4;}
+  .ocs{background:var(--condbg); border-top:3px solid var(--cond);}
+  .ocs .oh{color:var(--cond);}
+  /* area cards */
+  .areas{display:grid; grid-template-columns:repeat(5,1fr); gap:9px; margin:8px 0 2px;}
+  @media(max-width:880px){.areas{grid-template-columns:1fr 1fr;}}
+  .acard{background:#fff; border:1px solid var(--line); border-top:4px solid var(--steel); border-radius:9px; padding:11px 12px;}
+  .acard .an{font-size:11px; font-weight:800; color:var(--steel); letter-spacing:.5px;}
+  .acard .at{font-weight:800; color:var(--navy); font-size:12.6px; margin:3px 0 5px; line-height:1.3;}
+  .acard .ad{font-size:11.3px; color:var(--gray); line-height:1.5;}
+  .acard.changed{border-top-color:var(--accent);} .acard.changed .an{color:var(--accent);}
+  /* member cards */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr;}}
+  .mcard{border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  .mhead{background:var(--navy2); color:#fff; padding:8px 13px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
+  .mhead .mn{font-size:14px; font-weight:800;}
+  .mhead .lv{font-size:10.5px; background:rgba(255,255,255,.18); padding:2px 8px; border-radius:5px;}
+  .mhead .role{font-size:11px; opacity:.92; margin-left:auto;}
+  .mbody{padding:11px 13px;}
+  ul.mlist{margin:4px 0 0; padding-left:17px;}
+  ul.mlist li{font-size:12.2px; margin-bottom:4px; line-height:1.5;}
+  ul.mlist li b.src{color:var(--rec);} ul.mlist li b.srcl{color:#3a4f9a;}
+  .load{margin-top:10px; border-top:1px dashed var(--line); padding-top:8px;}
+  .loadrow{display:flex; align-items:center; gap:7px; margin-bottom:5px;}
+  .loadrow .ll{font-size:10px; width:74px; color:var(--gray); flex:none;}
+  .track{flex:1; background:#eef1f4; border-radius:6px; height:13px; position:relative; overflow:hidden;}
+  .fill{height:100%; border-radius:6px;}
+  .fill.norm{background:var(--mid);} .fill.peak{background:repeating-linear-gradient(45deg,var(--peak),var(--peak) 6px,#c75a45 6px,#c75a45 12px);}
+  .loadrow .pv{font-size:10px; width:60px; text-align:right; color:var(--navy2); font-weight:700; flex:none;}
+  /* callout */
+  .callout{border-radius:9px; padding:13px 16px; margin:11px 0; font-size:12.4px;}
+  .c-warn{background:var(--recbg); border:1px solid #eccabf; border-left:5px solid var(--rec);}
+  .c-info{background:#eef4fb; border:1px solid #cfe0f2; border-left:5px solid var(--steel);}
+  .c-key{background:#fffaf0; border:1px solid #ecdcb4; border-left:5px solid var(--accent);}
+  .c-purp{background:var(--movebg); border:1px solid #d9c8f0; border-left:5px solid var(--move);}
+  .callout .ct{display:block; font-weight:800; color:var(--navy); font-size:13px; margin-bottom:8px;}
+  .callout p{margin:0 0 6px; line-height:1.7;} .callout p:last-child{margin:0;}
+  .callout ul.cl{margin:0; padding-left:18px;}
+  .callout ul.cl li{font-size:12.3px; line-height:1.65; margin-bottom:6px;}
+  .callout ul.cl li:last-child{margin-bottom:0;} .callout ul.cl li b{color:var(--navy);}
+  /* phased reduction */
+  .phase{display:grid; grid-template-columns:1fr 24px 1fr; align-items:stretch; gap:0; margin:10px 0;}
+  @media(max-width:760px){.phase{grid-template-columns:1fr;}}
+  .pcol{border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  .pcol .ph{padding:9px 13px; color:#fff; font-weight:800; font-size:13px;}
+  .pcol.p1 .ph{background:var(--rec);} .pcol.p2 .ph{background:var(--move);}
+  .pcol .pb{padding:11px 13px; font-size:12.2px;}
+  .pcol .pb p{margin:0 0 6px;} .pcol .pb .who{font-weight:800; color:var(--navy);}
+  .parr{display:flex; align-items:center; justify-content:center; color:var(--steel); font-size:22px; font-weight:800;}
+  @media(max-width:760px){.parr{height:26px;}}
+  /* timeline / seasonal calendar */
+  .cal{margin:10px 0 4px;}
+  .calhead{display:grid; grid-template-columns:repeat(6,1fr); gap:6px; margin-bottom:5px;}
+  .calhead div{text-align:center; font-weight:800; font-size:12px; color:var(--navy); background:var(--soft); border:1px solid var(--line); border-radius:7px; padding:5px 0;}
+  .calbar{display:grid; grid-template-columns:repeat(6,1fr); gap:6px;}
+  .cell{border-radius:7px; padding:8px 7px; color:#fff; min-height:78px; font-size:10.6px; line-height:1.4;}
+  .cell .lvl{font-weight:800; font-size:11px; display:block; margin-bottom:4px;}
+  .lv-calm{background:var(--calm);} .lv-mid{background:var(--mid);} .lv-high{background:var(--high);} .lv-peak{background:var(--peak);}
+  .callegend{font-size:11px; color:var(--gray); margin-top:8px; display:flex; flex-wrap:wrap; gap:14px;}
+  .callegend span{display:inline-flex; align-items:center; gap:5px;}
+  .dot{width:11px; height:11px; border-radius:3px; display:inline-block;}
+  /* leave timeline */
+  .lt{border:1px solid var(--line); border-radius:9px; padding:11px 13px; font-size:12.3px;}
+  .lt .lr{display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;}
+  .lt .lr:last-child{margin-bottom:0;}
+  .lt .ld{flex:none; width:96px; font-weight:800; color:var(--rec);}
+  /* compare */
+  .cmp{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:8px 0;}
+  @media(max-width:760px){.cmp{grid-template-columns:1fr;}}
+  .opt{border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  .opt .oh2{padding:9px 13px; color:#fff; font-weight:800; font-size:13px; display:flex; justify-content:space-between; align-items:center;}
+  .opt.a .oh2{background:var(--keep);} .opt.b .oh2{background:var(--steel);}
+  .opt .oh2 .pct{font-size:12px; background:rgba(255,255,255,.22); padding:2px 9px; border-radius:12px;}
+  .opt .ob2{padding:11px 13px; font-size:12px;}
+  .opt .ob2 .lab{font-weight:800; color:var(--navy2); font-size:11px; margin:7px 0 3px;}
+  .opt .ob2 ul{margin:2px 0 0; padding-left:16px;} .opt .ob2 li{margin-bottom:4px; line-height:1.5;}
+  .footnote{font-size:11px; color:var(--gray); border-top:1px solid var(--line); padding-top:12px; margin-top:18px; line-height:1.7;}
+  @media(max-width:760px){.kpis{grid-template-columns:repeat(3,1fr);} .areas{grid-template-columns:1fr 1fr;} .cover,.body{padding-left:24px; padding-right:24px;}}
+  @media print{
+    body{background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .page{box-shadow:none; max-width:100%;}
+    .cover{padding:32px 40px 26px;} .body{padding:22px 40px 26px;}
+    section{margin-bottom:16px;}
+    table,.mcard,.callout,.kpi,.acard,.opt,.pcol,.lt,.cal{page-break-inside:avoid; break-inside:avoid;}
+    thead{display:table-header-group;} tr{page-break-inside:avoid;}
+    section.pg{page-break-before:always; break-before:page;}
+    h3.sec,h4,.sec-sub{page-break-after:avoid;}
+  }
+  @page{size:A4; margin:11mm 0;}
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- COVER -->
+  <div class="cover">
+    <div class="badge">대외비 · 인력 운영 계획 (개정본)</div>
+    <p class="eyebrow">HR 정리본 · REV.2026.06.18</p>
+    <h1>디지털마케팅팀 인력 운영 계획안 (개정)</h1>
+    <h2>플랫폼파트 해체 반영 · NELT 최소화 · 전사 서책/신규서비스 확장 전환<br>9–6(월–금) 풀가동 + 하반기 극성수기 야근 부하 고려 설계</h2>
+    <div class="meta">
+      <div><b>보고일자</b>2026. 06. 18</div>
+      <div><b>작성자</b>디지털마케팅팀 김동범 팀장</div>
+      <div><b>팀 내 인력</b>8인</div>
+      <div><b>CS 조직 이동</b>2인 (박재연·조하린)</div>
+      <div><b>운영 합계</b>10인</div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- 0. 이번 개정 반영사항 -->
+    <section>
+      <h3 class="sec">이번 개정에서 반영한 사항</h3>
+      <p class="sec-sub">대표님·검토 의견을 반영하여 직전안에서 변경된 부분만 정리</p>
+      <div class="chg">
+        <div class="ci"><b>① 플랫폼파트 해체.</b><br>NELT는 최소화 운영으로 전환합니다.</div>
+        <div class="ci"><b>② 원장 풀 운영 주체 변경.</b><br>기존 김영일 중심 → <b>김동범 팀장 중심, 이국전 서포트</b>로 변경합니다.</div>
+        <div class="ci"><b>③ 플랫폼파트 업무 재정의.</b><br>NELT 위주 운영을 <b>전사 서책·신규서비스 확장</b> 업무로 전환합니다.</div>
+        <div class="ci"><b>④ 콘텐츠 인력 확정.</b><br>콘텐츠는 김한솔이 전담합니다.</div>
+        <div class="ci"><b>⑤ CS는 조직 단위 이동.</b><br>박재연·조하린 <b>2인</b>이 이동합니다.</div>
+        <div class="ci"><b>⑥ 출산휴가 일정 반영.</b><br>조해인 7월 말, 안영은 9월 중순으로 반영합니다.</div>
+        <div class="ci"><b>⑦ 단계적 정리.</b><br>1차는 김영일·성주희, 2차는 이채영·이국전(12월 말)입니다.</div>
+        <div class="ci"><b>⑧ 극성수기 설계.</b><br>9–6 풀가동에 더해 하반기 야근 부하까지 고려합니다.</div>
+      </div>
+    </section>
+
+    <!-- 1. 요약 -->
+    <section>
+      <h3 class="sec">1. 한눈에 보는 결론</h3>
+      <div class="lead">
+        <p>플랫폼 전담 운영은 폐지하고, NELT는 유지보수 수준으로 <b>최소화 운영</b>합니다.</p>
+        <p>기존 플랫폼파트 인력은 <b>전사 서책·신규서비스 확장</b> 업무로 전환해 매출 원천에 다시 붙입니다.</p>
+        <p>원장 풀(약 300명)은 <b>김동범 팀장 중심</b>으로 운영하고 <b>이국전이 서포트</b>합니다.</p>
+        <p>9–6 풀가동 기준 적정 인원은 <b>팀 내 8인 + CS 이동 2인(박재연·조하린) = 10인</b>입니다.</p>
+        <p>정리는 단계적으로 진행합니다. <b>1차는 김영일·성주희</b>, <b>2차는 이채영·이국전</b>입니다.</p>
+        <p>2차는 세미나·맞춤형교재 안정화, 주니어랩·NELT 정리 완료, 극성수기(채택·신규서비스 런칭) 종료를 조건으로 <b>12월 말 시행</b>합니다.</p>
+        <p>하반기 극성수기(신간 런칭 9~10월)는 야근을 포함한 가중 부하로 별도 설계했습니다.</p>
+      </div>
+      <div class="kpis">
+        <div class="kpi green"><div class="n">8인</div><div class="l">팀 내 인력</div></div>
+        <div class="kpi gold"><div class="n">+2인</div><div class="l">CS 이동<br>(박재연·조하린)</div></div>
+        <div class="kpi"><div class="n">10인</div><div class="l">운영 합계</div></div>
+        <div class="kpi red"><div class="n">2인</div><div class="l">1차 정리<br>(김영일·성주희)</div></div>
+        <div class="kpi purple"><div class="n">2인</div><div class="l">2차 정리<br>(이채영·이국전, 12월 말)</div></div>
+        <div class="kpi"><div class="n">2인</div><div class="l">출산휴가<br>(한시 분담)</div></div>
+      </div>
+    </section>
+
+    <!-- 2. 조직도 -->
+    <section>
+      <h3 class="sec">2. 운영 조직도</h3>
+      <p class="sec-sub">김동범 팀장 — 이채영 파트장 2단 체제 / 팀 8인 + CS 조직 2인</p>
+      <div class="org">
+        <div class="obox otop">김동범 · 팀장 (CL4)<br><span style="font-size:11px;opacity:.85;font-weight:400;">총괄 · 채널 자사몰 유입 · 원장 풀 중심 운영</span></div>
+        <div class="ostem"></div>
+        <div class="obox opart">이채영 · 파트장 (CL4) — 콘텐츠·운영 실무 총괄 <span class="tag t-2nd" style="margin-left:6px;">2차 정리 검토</span></div>
+        <div class="orow">
+          <div class="ocell"><div class="oh">이국전 (CL4)</div><div class="od">주니어랩 · 원장 풀 서포트 <span class="tag t-2nd" style="margin-top:4px;">2차 정리 검토</span></div></div>
+          <div class="ocell"><div class="oh">최수주 (G2)</div><div class="od">주니어랩 본사 운영·계약 CS</div></div>
+          <div class="ocell"><div class="oh">서유미 (CL2)</div><div class="od">신간 런칭·채널·서책 광고면·세미나</div></div>
+          <div class="ocell"><div class="oh">김한솔 (CL3)</div><div class="od">노출→유입 마케팅·AI 콘텐츠</div></div>
+          <div class="ocell"><div class="oh">정초원 (CL2)</div><div class="od">온라인 콘텐츠·프로모션·자사몰 유입 지원</div></div>
+          <div class="ocell"><div class="oh">김성준 (CL4)</div><div class="od">전사 서책·신규서비스 확장 (NELT 최소화)</div></div>
+          <div class="ocell ocs"><div class="oh">박재연</div><div class="od">C/S 통합 응대 (이동)</div></div>
+          <div class="ocell ocs"><div class="oh">조하린</div><div class="od">C/S 통합 응대 (이동)</div></div>
+        </div>
+      </div>
+      <p style="font-size:11.5px;color:var(--gray);margin-top:10px;">※ 출산휴가 2인(조해인·안영은)은 한시 공백으로 별도 분담합니다. 1차 정리 2인(김영일·성주희)은 조직도에서 제외하며, 2차 정리(이채영·이국전)는 12월 말 시행 예정으로 별도 표기합니다.</p>
+    </section>
+
+    <!-- 3. 5대 영역 -->
+    <section class="pg">
+      <h3 class="sec">3. 5대 집중영역 (개정 반영)</h3>
+      <p class="sec-sub">영역 ④를 ‘전사 서책·신규서비스 확장’으로 재정의 — NELT 위주 운영 종료</p>
+      <div class="areas">
+        <div class="acard"><div class="an">영역 ①</div><div class="at">채널 연계 자사몰 유입</div><div class="ad">지사·총판·도도매 자사몰 유입 유도.<br>지역세일즈팀 오프라인 영업 시 유입 유도.<br>원장 풀은 팀장 중심 운영.</div></div>
+        <div class="acard"><div class="an">영역 ②</div><div class="at">주니어랩 유입·유지</div><div class="ad">커리큘럼 분석→자사 콘텐츠 학원 유지 전략.<br>풀뿌리·자기주도 설계, 거래처 연계 사업이관.<br>본사관리 시 배송·운영·계약 CS.</div></div>
+        <div class="acard"><div class="an">영역 ③</div><div class="at">노출 → 유입 마케팅</div><div class="ad">SNS·이벤트·프로모션·서평단·맘카페·인플루언서.<br>신간 런칭, 채택·활용 세미나.<br>서책 내 광고페이지(Books·Tutor 유입).</div></div>
+        <div class="acard changed"><div class="an">영역 ④ · 변경</div><div class="at">전사 서책·신규서비스 확장</div><div class="ad">NELT는 최소화 운영(유지보수 수준).<br>플랫폼 보유고객 분석을 전사 서책·신규서비스 확장으로 전환.<br>런칭 시 지속 유입·활성화.</div></div>
+        <div class="acard"><div class="an">영역 ⑤</div><div class="at">C/S 통합</div><div class="ad">박재연·조하린 2인 조직 이동.<br>전문 답변은 해당 팀 이관·취합 응대.<br>ELT·중고등 통합 운영.</div></div>
+      </div>
+    </section>
+
+    <!-- 4. 인력 배치표 -->
+    <section>
+      <h3 class="sec">4. 인력 배치표</h3>
+      <p class="sec-sub">팀 8인 + CS 조직 2인 / 주 담당 영역과 책임 범위</p>
+      <table>
+        <thead><tr><th style="width:92px;">담당</th><th style="width:62px;">직급</th><th style="width:140px;">주 담당</th><th>책임 범위</th></tr></thead>
+        <tbody>
+          <tr><td class="nm">김동범</td><td>CL4·팀장</td><td>총괄 / ① / 원장 풀</td><td>팀 전략·우선순위 총괄.<br>채널마케팅본부 연계 자사몰·D2C 유입 전략.<br>원장 풀(약 300명) 중심 운영, 핵심고객 관리.</td></tr>
+          <tr><td class="nm">이채영</td><td>CL4·파트장</td><td>파트총괄 / ② 콘텐츠</td><td>콘텐츠·운영 실무 총괄.<br>주니어랩 커리큘럼 분석·자기주도 수업 설계.<br>OSMU·맞춤형교재·콘텐츠 전략. <span class="tag t-2nd">2차 정리 검토(12월 말)</span></td></tr>
+          <tr><td class="nm">이국전</td><td>CL4</td><td>② 주니어랩 / 원장 서포트</td><td>주니어랩 학원 유지·전환, 거래처 연계 사업이관.<br>본사 운영·계약 CS(최수주와 2인).<br>원장 풀 운영 서포트. <span class="tag t-2nd">2차 정리 검토</span></td></tr>
+          <tr><td class="nm">최수주</td><td>G2</td><td>② 본사 운영·CS</td><td>주니어랩 본사 직접관리 실무.<br>배송·운영·계약 C/S 대응. <span class="tag t-keep">권고→잔류</span></td></tr>
+          <tr><td class="nm">서유미</td><td>CL2</td><td>③ 런칭·채널</td><td>신간 런칭 전략·프로모션.<br>서점·플랫폼 채널 등록, 서책 내 광고페이지 관리.<br>채택·활용 세미나 운영.</td></tr>
+          <tr><td class="nm">김한솔</td><td>CL3</td><td>③ 유입·AI콘텐츠</td><td>노출→유입 마케팅 실행(SNS·이벤트·프로모션·서평단·맘카페·인플루언서).<br>생성형 AI 콘텐츠·상세페이지 제작.</td></tr>
+          <tr><td class="nm">정초원</td><td>CL2</td><td>③ 콘텐츠 / ① 지원</td><td>온라인 운영·맞춤형교재.<br>시즈널 프로모션 배너·모객(SMS·카카오).<br>자사몰 유입 콘텐츠 지원.</td></tr>
+          <tr><td class="nm">김성준</td><td>CL4</td><td>④ 전사 서책·신규서비스 확장</td><td>전사 서책·신규서비스 확장 기획·실행.<br>플랫폼 보유고객 분석·유입, 런칭 활성화.<br>NELT 최소화 운영(유지보수).</td></tr>
+          <tr style="background:var(--condbg);"><td class="nm">박재연</td><td>고객센터</td><td>⑤ C/S 통합</td><td>서책·서비스 통합 고객 응대.<br>전문 답변 해당 팀 이관·취합. <span class="tag t-move">이동</span></td></tr>
+          <tr style="background:var(--condbg);"><td class="nm">조하린</td><td>고객센터</td><td>⑤ C/S 통합</td><td>통합 고객 응대 분담.<br>ELT·중고등 통합 운영, 응시권·정산 정리. <span class="tag t-move">이동</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 5. 개인별 부하 -->
+    <section class="pg">
+      <h3 class="sec">5. 개인별 R&R · 부하 설계 (평상시 vs 극성수기)</h3>
+      <p class="sec-sub">평상시는 9–6(월–금) 풀가동, 극성수기는 야근 포함 가중 부하로 환산 (평상=100% 기준)</p>
+      <div class="grid2">
+        <!-- 김동범 -->
+        <div class="mcard"><div class="mhead"><span class="mn">김동범</span><span class="lv">CL4·팀장</span><span class="role">총괄 / ① / 원장 풀</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>채널마케팅본부 연계 자사몰·D2C 유입 전략.</li>
+              <li>원장 풀(약 300명) 중심 운영 — <b class="src">← 김영일</b> 이관.</li>
+              <li>팀 전략·우선순위·재배분 총괄, 핵심고객 관리.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:80%"></span></span><span class="pv">+30% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 이채영 -->
+        <div class="mcard" style="border-color:#d9c8f0;"><div class="mhead" style="background:var(--move);"><span class="mn">이채영</span><span class="lv">CL4·파트장</span><span class="role">파트총괄 / ② 콘텐츠</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>콘텐츠·운영 실무 총괄(파트 조율).</li>
+              <li>주니어랩 커리큘럼 분석·자기주도 수업 설계.</li>
+              <li>OSMU·맞춤형교재·콘텐츠 전략.</li>
+              <li><b class="srcl">← 조해인(휴가)</b> 교재 부가자료 관리.</li>
+            </ul>
+            <div class="callout c-purp" style="margin:9px 0 0; padding:9px 12px;">
+              <b style="color:var(--move);">2차 정리 검토</b> — 세미나·맞춤형교재 안정화 및 극성수기 종료 후 12월 말 시행 대상으로 검토합니다.
+            </div>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:90%"></span></span><span class="pv">+40% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 이국전 -->
+        <div class="mcard" style="border-color:#d9c8f0;"><div class="mhead" style="background:var(--move);"><span class="mn">이국전</span><span class="lv">CL4</span><span class="role">② 주니어랩 / 원장 서포트</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>주니어랩 학원 유지·전환, 거래처(크리에잇·플에이스) 연계 사업이관.</li>
+              <li>본사 운영·계약 CS(최수주와 2인).</li>
+              <li>원장 풀 운영 서포트(김동범 중심).</li>
+            </ul>
+            <div class="callout c-purp" style="margin:9px 0 0; padding:9px 12px;">
+              <b style="color:var(--move);">2차 정리 검토</b> — 주니어랩 및 기존 NELT 업무가 정리 완료되면 2차 정리 대상으로 검토합니다.
+            </div>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:70%"></span></span><span class="pv">+20% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 최수주 -->
+        <div class="mcard"><div class="mhead"><span class="mn">최수주</span><span class="lv">G2</span><span class="role">② 본사 운영·CS</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>주니어랩 본사 직접관리 — 배송·운영 대응.</li>
+              <li>학원 계약 C/S, 정산 지원.</li>
+              <li>사업운영 실무 지원.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:75%"></span></span><span class="pv">+25% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 서유미 -->
+        <div class="mcard"><div class="mhead"><span class="mn">서유미</span><span class="lv">CL2</span><span class="role">③ 런칭·채널 ★</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>신간 런칭 전략·프로모션.</li>
+              <li>서점·플랫폼 채널 등록, 서책 내 광고페이지 관리.</li>
+              <li>채택·활용 세미나 운영.</li>
+              <li><b class="srcl">← 안영은(휴가)</b> 서점·온라인 3사 등록, MD 소통.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:100%"></span></span><span class="pv">+50% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 김한솔 -->
+        <div class="mcard"><div class="mhead"><span class="mn">김한솔</span><span class="lv">CL3</span><span class="role">③ 유입·AI콘텐츠</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>노출→유입 마케팅(SNS·이벤트·프로모션).</li>
+              <li>서평단·맘카페·인플루언서 관리.</li>
+              <li>생성형 AI 이미지·영상·상세페이지 제작.</li>
+              <li><b class="srcl">← 안영은(휴가)</b> 인스타툰·체험단·카페 운영.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:95%"></span></span><span class="pv">+45% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 정초원 -->
+        <div class="mcard"><div class="mhead"><span class="mn">정초원</span><span class="lv">CL2</span><span class="role">③ 콘텐츠 / ① 지원</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>온라인 운영·맞춤형교재 제작.</li>
+              <li>시즈널 프로모션 배너·모객(SMS·카카오).</li>
+              <li>자사몰 유입 콘텐츠 지원(①).</li>
+              <li><b class="srcl">← 조해인(휴가)</b> 판매몰 잔여 CS(최소)·프로모션 지원.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:90%"></span></span><span class="pv">+40% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 김성준 -->
+        <div class="mcard"><div class="mhead"><span class="mn">김성준</span><span class="lv">CL4</span><span class="role">④ 전사 서책·신규서비스 확장</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>전사 서책·신규서비스 확장 기획·실행.</li>
+              <li>플랫폼 보유고객 분석·유입, 런칭 활성화.</li>
+              <li>NELT 최소화 운영(유지보수 수준).</li>
+              <li><b class="src">← 김영일/성주희</b> 서비스 영업·매출 정리(일부).</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:80%"></span></span><span class="pv">+30% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 박재연 -->
+        <div class="mcard" style="border-color:#ecdcb4;"><div class="mhead" style="background:var(--cond);"><span class="mn">박재연</span><span class="lv">고객센터</span><span class="role">⑤ C/S 통합 (이동)</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>서책·서비스 통합 1차 응대 총괄.</li>
+              <li>전문 답변은 해당 팀 이관 또는 취합 응대.</li>
+              <li>ELT·중고등 통합 운영.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:95%"></span></span><span class="pv">+45% 야근</span></div>
+            </div>
+          </div></div>
+        <!-- 조하린 -->
+        <div class="mcard" style="border-color:#ecdcb4;"><div class="mhead" style="background:var(--cond);"><span class="mn">조하린</span><span class="lv">고객센터</span><span class="role">⑤ C/S 통합 (이동)</span></div>
+          <div class="mbody">
+            <ul class="mlist">
+              <li>통합 고객 응대 분담(채널·문의 유형별).</li>
+              <li>응시권·정산·반품 등 운영성 CS 정리.</li>
+              <li>프로모션·런칭 기간 응대 증가분 대응.</li>
+            </ul>
+            <div class="load">
+              <div class="loadrow"><span class="ll">평상시</span><span class="track"><span class="fill norm" style="width:100%"></span></span><span class="pv">100%</span></div>
+              <div class="loadrow"><span class="ll">극성수기</span><span class="track"><span class="fill peak" style="width:95%"></span></span><span class="pv">+45% 야근</span></div>
+            </div>
+          </div></div>
+      </div>
+      <p style="font-size:11.5px;color:var(--gray);margin-top:8px;">※ ‘극성수기 +%’는 평상시 대비 추가 투입(야근·주말 등) 환산치입니다. 런칭 최전선인 서유미·김한솔·정초원과 CS 2인의 가중치가 가장 큽니다.</p>
+    </section>
+
+    <!-- 6. 단계적 정리 -->
+    <section class="pg">
+      <h3 class="sec">6. 단계적 정리 계획</h3>
+      <p class="sec-sub">전담 직무 발생 여부와 사업 정리 진행도에 따라 1·2차로 구분</p>
+      <div class="phase">
+        <div class="pcol p1">
+          <div class="ph">1차 정리 (즉시) · 2인</div>
+          <div class="pb">
+            <p><span class="who">김영일 (CL4)</span></p>
+            <p>원장 풀은 팀장 중심으로 이관, 서비스 영업은 김성준이 흡수합니다.</p>
+            <p style="margin-top:8px;"><span class="who">성주희 (CL2)</span></p>
+            <p>세미나·사이트 CS·매출 정리는 김성준·CS 조직이 흡수합니다.</p>
+          </div>
+        </div>
+        <div class="parr">→</div>
+        <div class="pcol p2">
+          <div class="ph">2차 정리 (조건부 · 12월 말) · 2인</div>
+          <div class="pb">
+            <p><span class="who">이채영 (CL4·파트장)</span></p>
+            <p>세미나 운영과 맞춤형교재가 안정화되는 시점까지 콘텐츠·운영 실무를 총괄합니다.</p>
+            <p>안정화 및 극성수기(채택·신규서비스 런칭) 종료 후 12월 말 정리 대상으로 검토합니다.</p>
+            <p style="margin-top:8px;"><span class="who">이국전 (CL4)</span></p>
+            <p>주니어랩 및 기존 NELT 업무가 정리 완료되는 시점까지 본사 운영·계약 CS를 유지합니다.</p>
+            <p>정리 완료 및 극성수기 종료 후 12월 말 정리 대상으로 검토합니다.</p>
+          </div>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th style="width:90px;">단계</th><th style="width:120px;">대상</th><th>업무 흡수 주체</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag t-rec">1차</span></td><td class="nm">김영일 (CL4)</td><td>원장 풀 → 김동범(중심)·이국전(서포트) / 서비스 영업 → 김성준</td></tr>
+          <tr><td><span class="tag t-rec">1차</span></td><td class="nm">성주희 (CL2)</td><td>세미나·사이트 CS·매출 정리 → 김성준 · 박재연·조하린</td></tr>
+          <tr style="background:var(--movebg);"><td><span class="tag t-2nd">2차 · 12월 말</span></td><td class="nm">이채영 (CL4)</td><td>세미나·맞춤형교재 안정화 및 극성수기 종료 후 검토 → 콘텐츠·커리큘럼은 외주·정초원 분담</td></tr>
+          <tr style="background:var(--movebg);"><td><span class="tag t-2nd">2차 · 12월 말</span></td><td class="nm">이국전 (CL4)</td><td>주니어랩·NELT 정리 완료 및 극성수기 종료 후 검토 → 잔여는 최수주·김성준 흡수</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 7. 극성수기 캘린더 -->
+    <section>
+      <h3 class="sec">7. 하반기 운영 강도 · 야근 고려 설계</h3>
+      <p class="sec-sub">9–6 평상 가동에 더해, 신간 런칭이 몰리는 9~10월을 극성수기로 사전 설계</p>
+      <div class="cal">
+        <div class="calhead">
+          <div>7월</div><div>8월</div><div>9월</div><div>10월</div><div>11월</div><div>12월</div>
+        </div>
+        <div class="calbar">
+          <div class="cell lv-mid"><span class="lvl">보통</span>런칭 준비 착수.<br>조해인 휴가(말)·인수인계.</div>
+          <div class="cell lv-high"><span class="lvl">높음</span>런칭물 제작 집중.<br>안영은 인수인계 완료(말).</div>
+          <div class="cell lv-peak"><span class="lvl">극성수기</span>런칭 D-단계.<br>안영은 휴가(중순).<br>야근 집중.</div>
+          <div class="cell lv-peak"><span class="lvl">극성수기</span>신간 6~7종 런칭.<br>최대 부하·야근.</div>
+          <div class="cell lv-high"><span class="lvl">높음</span>런칭 후속·채택 확산.<br>세미나 집중.</div>
+          <div class="cell lv-mid"><span class="lvl">보통</span>연말 정산·프로모션.<br>조해인 휴가 지속.<br>2차 정리(이채영·이국전) 시행.</div>
+        </div>
+        <div class="callegend">
+          <span><span class="dot" style="background:var(--calm)"></span>여유</span>
+          <span><span class="dot" style="background:var(--mid)"></span>보통(9–6)</span>
+          <span><span class="dot" style="background:var(--high)"></span>높음(부분 야근)</span>
+          <span><span class="dot" style="background:var(--peak)"></span>극성수기(야근 포함)</span>
+        </div>
+      </div>
+      <div class="callout c-warn">
+        <span class="ct">⚠ 극성수기 운영 원칙</span>
+        <ul class="cl">
+          <li>9~10월은 야근·주말 투입을 전제로 인력을 배분합니다.</li>
+          <li>런칭 최전선(서유미·김한솔·정초원)과 CS 2인은 이 기간 최우선 보강 대상입니다.</li>
+          <li>야근 부하는 평상시 100%를 초과하는 만큼 보상·대체휴무 등 운영 기준을 함께 마련해야 합니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. 출산휴가 -->
+    <section>
+      <h3 class="sec">8. 출산휴가 운영</h3>
+      <p class="sec-sub">조해인 7월 말 / 안영은 9월 중순 — 런칭 인접 구간이므로 인수인계 시점을 사전 고정</p>
+      <div class="lt">
+        <div class="lr"><span class="ld">조해인 · 7월 말</span><span>판매몰 잔여 CS는 최소 운영으로 정초원이 흡수합니다.<br>자사몰 전담은 비승계하며, 교재 부가자료는 이채영이 맡습니다.</span></div>
+        <div class="lr"><span class="ld">안영은 · 9월 중순</span><span>서점·신간 등록은 <b>8월 말까지 인수인계를 완료</b>합니다.<br>휴가 기간 중 서유미·김한솔이 차질 없이 분담합니다.</span></div>
+      </div>
+      <div class="callout c-info" style="margin-top:11px;">
+        <p>안영은의 휴가(9월 중순)가 10월 신간 런칭과 인접하므로, 인수인계 지연은 런칭 리스크로 직결됩니다.</p>
+        <p>따라서 8월 말 완료를 고정 마일스톤으로 관리합니다.</p>
+      </div>
+    </section>
+
+    <!-- 9. 조직 귀속 -->
+    <section class="pg">
+      <h3 class="sec">9. 조직 귀속 검토 — 대표님 결정 요청</h3>
+      <p class="sec-sub">고객 유입·관리(CS) 기능을 어느 본부에 둘 것인가 — 양안 비교</p>
+      <p>본부는 하나의 채널로 정렬하고, ‘책을 잘 만드는 조직’과 ‘잘 팔고 고객을 관리하는 조직’ 2개로 구분되는 것이 바람직하다고 봅니다(팀장 의견).</p>
+      <div class="cmp">
+        <div class="opt a">
+          <div class="oh2"><span>안 A · 채널마케팅본부</span><span class="pct">권고 ≈ 60%</span></div>
+          <div class="ob2">
+            <div class="lab">근거</div>
+            <ul>
+              <li>유통(지사·총판·도도매)–학원 유입과 풀뿌리 고객이 결국 교집합입니다.</li>
+              <li>서책 기반 영업조직과 R&R·책임이 일치합니다.</li>
+              <li>현재 5대 영역 중 ①②③의 무게중심이 영업 현장에 있습니다.</li>
+            </ul>
+            <div class="lab">유의</div>
+            <ul><li>서비스(온라인) 운영 전문성과는 거리가 있습니다.</li></ul>
+          </div>
+        </div>
+        <div class="opt b">
+          <div class="oh2"><span>안 B · 디지털서비스본부</span><span class="pct">≈ 40%</span></div>
+          <div class="ob2">
+            <div class="lab">근거</div>
+            <ul>
+              <li>서비스 기반 온라인 조직과 인접합니다.</li>
+              <li>전사 서책·신규서비스 확장(영역④)의 데이터 역량과 연속성이 있습니다.</li>
+            </ul>
+            <div class="lab">유의</div>
+            <ul><li>유통·학원 현장과 분리되어 유입 동력이 약화될 우려가 있습니다.</li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout c-key">
+        <span class="ct">팀장 권고</span>
+        <ul class="cl">
+          <li>현재 기준으로는 <b>채널마케팅본부(약 60% 비중)</b>를 권고합니다.</li>
+          <li>다만 신규 스탯(Books·Tutor)이 나오면 동일 고객에게 거는 유입 비중이 달라질 수 있습니다.</li>
+          <li>그 시점에는 집중 본부가 바뀔 수 있습니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 맺음말 -->
+    <div class="callout c-info">
+      <span class="ct">맺음말 — 팀장 의견</span>
+      <p>본 안은 대표님 지시(플랫폼파트 해체·NELT 최소화·전사 서책/신규서비스 확장)를 반영한 개정본입니다.</p>
+      <p>9–6 풀가동에 더해 하반기 극성수기 야근 부하까지 고려해 설계했습니다.</p>
+      <p>인력 체제·단계적 정리·조직 귀속에 대해 한 번 더 검토를 요청드리며, <b>대표님의 결정에 따르겠습니다.</b></p>
+    </div>
+    <p class="footnote">본 보고서는 디지털마케팅팀장의 검토 의견이며, 대표님 제시 5대 집중영역과 9–6(월–금) 풀가동 + 하반기 극성수기 야근 부하를 기준으로 작성되었습니다. 주니어랩 사업 철수 등 경영 결정사항은 별도 절차를 따릅니다. 구체적 이관·정리는 대상자 사전 협의를 거쳐 확정되어야 하며, 본 문서는 대외비로 관리됩니다. · 작성: 디지털마케팅팀 김동범 팀장 · 2026. 06. 18 (REV)</p>
+  </div>
+</div>
+</body>
+</html>
